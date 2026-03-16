@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zarathustra | AI Kitap Analiz Rehberi</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --accent: #8b5cf6;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+        nav { width: 100%; max-width: 800px; padding: 2rem; display: flex; justify-content: space-between; }
+        .hero { text-align: center; padding: 4rem 2rem; max-width: 800px; }
+        h1 { font-size: 3rem; margin-bottom: 1rem; background: linear-gradient(to right, #a78bfa, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        p.tagline { font-size: 1.25rem; color: var(--muted); margin-bottom: 2rem; }
+        .cta-button {
+            background-color: var(--accent);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: bold;
+            transition: opacity 0.2s;
+        }
+        .cta-button:hover { opacity: 0.9; }
+        .legal-links { margin-top: auto; padding: 2rem; border-top: 1px solid #1e293b; width: 100%; text-align: center; font-size: 0.875rem; }
+        .legal-links a { color: var(--muted); margin: 0 1rem; text-decoration: none; }
+        .legal-links a:hover { color: var(--accent); }
+        .section { display: none; padding: 2rem; max-width: 800px; }
+        .section:target { display: block; }
+        .section:target ~ .hero { display: none; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div style="font-weight: bold; font-size: 1.5rem;">Zarathustra</div>
+        <a href="mailto:halitaldemir23@gmail.com" style="color: var(--accent); text-decoration: none;">Destek</a>
+    </nav>
+
+    <div class="hero">
+        <h1>Bilinmeyeni Analiz Et</h1>
+        <p class="tagline">Zarathustra, kitaplardaki derin anlamları, karakter arklarını ve temaları yapay zeka ile çözen kişisel rehberinizdir.</p>
+        <a href="#" class="cta-button">App Store'dan Yakında İndir</a>
+    </div>
+
+    <div id="privacy" class="section">
+        <h2>Gizlilik Politikası</h2>
+        <p>Zarathustra uygulaması kullanıcı gizliliğine önem verir. Uygulama içerisinde analiz edilen kitap verileri anonim olarak işlenir ve üçüncü taraflarla paylaşılmaz. Kayıt tutulmayan bir deneyim sunmayı amaçlıyoruz.</p>
+        <a href="/" style="color: var(--accent);">← Geri Dön</a>
+    </div>
+
+    <div id="terms" class="section">
+        <h2>Kullanım Şartları</h2>
+        <p>Zarathustra, eğitim ve kişisel gelişim amaçlı bir araçtır. Sunulan analizler yapay zeka tarafından üretilmektedir ve her zaman %100 doğruluk garantisi vermez.</p>
+        <a href="/" style="color: var(--accent);">← Geri Dön</a>
+    </div>
+
+    <footer class="legal-links">
+        <a href="#privacy">Gizlilik Politikası</a>
+        <a href="#terms">Kullanım Şartları</a>
+        <p style="margin-top: 1rem; opacity: 0.5;">&copy; 2026 Halit Aldemir. Tüm hakları saklıdır.</p>
+    </footer>
+
+</body>
+</html>
