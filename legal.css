@@ -1,0 +1,287 @@
+/* ═══════════════════════════════════════════════
+   Zarathustra - Legal Pages Shared Styles
+   Used by: privacy.html, terms.html, support.html, delete-account.html
+   ═══════════════════════════════════════════════ */
+
+/* Legal page layout */
+.legal-page {
+  min-height: 100vh;
+  padding: 120px 24px 80px;
+  position: relative;
+  z-index: 1;
+}
+
+.legal-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Back link */
+.legal-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--subtext);
+  font-size: 0.9rem;
+  margin-bottom: 32px;
+  transition: color 0.3s;
+}
+
+.legal-back:hover {
+  color: var(--text);
+}
+
+/* Page header */
+.legal-header {
+  margin-bottom: 48px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-header h1 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 12px;
+}
+
+.legal-header .legal-meta {
+  font-size: 0.9rem;
+  color: var(--subtext);
+}
+
+.legal-header .legal-meta strong {
+  color: var(--primary);
+}
+
+/* Content sections */
+.legal-content h2 {
+  font-size: 1.4rem;
+  margin: 40px 0 16px;
+  color: var(--accent);
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(35, 42, 56, 0.5);
+}
+
+.legal-content h3 {
+  font-size: 1.1rem;
+  margin: 24px 0 12px;
+  color: var(--text);
+}
+
+.legal-content p {
+  font-size: 0.95rem;
+  color: var(--subtext);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.legal-content ul,
+.legal-content ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.legal-content li {
+  font-size: 0.95rem;
+  color: var(--subtext);
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.legal-content li strong {
+  color: var(--text);
+}
+
+.legal-content a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.3s;
+}
+
+.legal-content a:hover {
+  color: var(--accent);
+}
+
+/* Info cards within legal pages */
+.legal-info-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin: 24px 0;
+}
+
+.legal-info-card h4 {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--accent);
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.legal-info-card p,
+.legal-info-card li {
+  font-size: 0.9rem;
+}
+
+/* Data table */
+.legal-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 24px 0;
+  font-size: 0.9rem;
+}
+
+.legal-table th,
+.legal-table td {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-table th {
+  color: var(--accent);
+  font-weight: 600;
+  background: var(--card);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.legal-table td {
+  color: var(--subtext);
+}
+
+.legal-table tr:hover td {
+  color: var(--text);
+  background: rgba(26, 33, 45, 0.3);
+}
+
+/* Badge for status indicators */
+.badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.badge-yes {
+  background: rgba(54, 226, 123, 0.12);
+  color: #36e27b;
+}
+
+.badge-no {
+  background: rgba(144, 155, 176, 0.12);
+  color: var(--subtext);
+}
+
+/* Contact form on support page */
+.contact-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 40px;
+  margin: 32px 0;
+}
+
+.contact-card h3 {
+  margin-top: 0;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--subtext);
+  font-size: 0.95rem;
+}
+
+.contact-item svg {
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.contact-item a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: var(--accent);
+}
+
+/* Deletion steps */
+.deletion-steps {
+  counter-reset: step;
+  list-style: none;
+  padding-left: 0;
+}
+
+.deletion-steps li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 48px;
+  margin-bottom: 24px;
+}
+
+.deletion-steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(182, 198, 211, 0.1);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-family: 'Playfair Display', serif;
+}
+
+/* Warning box */
+.warning-box {
+  background: rgba(255, 90, 95, 0.08);
+  border: 1px solid rgba(255, 90, 95, 0.2);
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.warning-box p {
+  color: #FF8A8E;
+}
+
+.warning-box strong {
+  color: #FF5A5F;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .legal-page {
+    padding: 100px 16px 60px;
+  }
+
+  .legal-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .contact-card {
+    padding: 24px;
+  }
+}
